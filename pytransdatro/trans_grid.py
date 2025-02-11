@@ -459,6 +459,8 @@ class Grid(abc.ABC):
         return r    
 
 class Grid1D(Grid):       
+    def __init__(self, file_name='EGG97_QGRJ.GRD'):
+        super().__init__(file_name)
 
     @property
     def _get_v_size(self):
@@ -499,6 +501,8 @@ class Grid1D(Grid):
         return (z + corr_sgn * corrs[0],)          
          
 class Grid2D(Grid):
+    def __init__(self, file_name='ETRS89_KRASOVSCHI42_2DJ.GRD'):
+        super().__init__(file_name)
 
     @property
     def _get_v_size(self):
